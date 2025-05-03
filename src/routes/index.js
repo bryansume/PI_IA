@@ -18,11 +18,7 @@ router.post("/rutaPOSTChatGPT", async (req, res) => {
       },
     ],
   });
-
-  completion.then((result) => {
-    console.log(result.choices[0].message);
-    res.send(completion.choices[0]);
-  });
+  res.send(completion.choices[0]);
 });
 
 module.exports = router;
